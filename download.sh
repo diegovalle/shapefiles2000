@@ -1,9 +1,9 @@
-#casperjs download.js
+casperjs download.js
 
 mkdir -p zip
 mkdir -p out
 
-#for f in zip/*.zip; do unzip -d "${f%*.zip}" "$f"; done
+for f in zip/*.zip; do unzip -d "${f%*.zip}" "$f"; done
 
 file_manzanas="out/mexico_2000_manzanas.shp"
 file_ageb="out/mexico_2000_ageb.shp"
