@@ -12,4 +12,6 @@ download.sh
 Requirements:
 
 * Casperjs
+* R
+* ogr2ogr
 
