@@ -8,6 +8,10 @@ mkdir -p out
 file_manzanas="out/mexico_2000_manzanas.shp"
 file_ageb="out/mexico_2000_ageb.shp"
 
+cd municipios
+Rscript get_zone.R
+cd ..
+
 for file in $(find zip -wholename "*MANZANAS*.shp" |  sort -n -t'/' -k2,2)
 do
   echo $(dirname $file)/$(basename -s .shp $file).prj

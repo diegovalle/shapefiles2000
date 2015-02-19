@@ -24,7 +24,8 @@ write.csv(cen, "centroids_zones.csv", row.names = FALSE)
 copyFile <- function(prjFile, file){
   file.copy(file.path('..', 'prj', prjFile),
             file.path('..', 'zip', dirname(file), 
-                      str_c(str_split_fixed(basename(file), "\\.", 2)[[1]], ".prj"))
+                      str_c(str_split_fixed(basename(file), "\\.", 2)[[1]], ".prj")),
+            overwrite = TRUE
   )
 }
 
@@ -42,7 +43,7 @@ for(file in files){
     if(str_detect(file, "937/MANZANAS/I0200084m.dbf")){
       mun  <- 18020
     }
-    print(as.character(cen$zone[which(mun == cen$CVEMUNI)])[[1]])
+    #print(as.character(cen$zone[which(mun == cen$CVEMUNI)])[[1]])
     switch(as.character(cen$zone[which(mun == cen$CVEMUNI)])[[1]],
            "11"=copyFile("26711.prj", file),
            "12"=copyFile("26712.prj", file),
