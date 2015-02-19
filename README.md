@@ -21,5 +21,5 @@ Errors:
 
 * In the AGEB and Manzanas shapefile Colima is floating south of Chiapas, this is entirely the fault of the INEGI
 * In the Manzanas shapefile some urban manazanas are floating in the Atlantic and Pacific oceans, this happend because the INEGI didn't specify which UTM zone they used for each shapefile.
-* The Manzanas shapefile is about 200m from the AGEB onr (nad27 vs nad83?) and they also don't quite match the 2010 SCINCE
+* The Manzanas shapefile is about 200m from the AGEB one (nad27 vs nad83?), they also don't quite match the 2010 SCINCE
 
